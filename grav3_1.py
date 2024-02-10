@@ -12,9 +12,9 @@ def main():
     print("SPRÓBUJ ODGADNĄĆ LICZBĘ WYLOSOWANĄ PRZEZ KOMPUTER")
 
     print("WYBIERZ POZIOM TRUDNOŚCI:")
-    print("1 => ŁATWY")
-    print("2 => ŚREDNI")
-    print("3 => TRUDNY")
+    print("1 => ŁATWY (Liczba jednocyfrowa, ilość prób: 2)")
+    print("2 => ŚREDNI (Liczba dwucyfrowa, ilość prób: 5)")
+    print("3 => TRUDNY (Liczba trzycyfrowa, ilość prób: 8)")
 
     # Definiowanie dostępnych poziomów trudności
     poziom_trudnosci = validate_input("WYBIERZ OPCJĘ (1/2/3): ", ["1", "2", "3"])
@@ -22,13 +22,13 @@ def main():
     # Wybór odpowiedniego zakresu liczb i liczby prób
     if poziom_trudnosci == "1":
         zakres_liczb = range(1, 11)
-        liczba_prob = 4
+        liczba_prob = 2
     elif poziom_trudnosci == "2":
         zakres_liczb = range(1, 101)
         liczba_prob = 5
     else:
         zakres_liczb = range(1, 1001)
-        liczba_prob = 10
+        liczba_prob = 8
 
     # Wylosowanie liczby
     liczba = random.choice(zakres_liczb)
